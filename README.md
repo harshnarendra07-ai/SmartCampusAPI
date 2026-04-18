@@ -1,16 +1,15 @@
-
 # Smart Campus Sensor & Room Management API
 
 ## 1. API Overview
-The **Smart Campus API** is a robust, RESTful web service built using Java and the JAX-RS (Jakarta RESTful Web Services) framework. Designed to support a university's automated building infrastructure, it manages physical `Rooms`, tracks diverse `Sensors` (such as CO2, temperature, and occupancy monitors), and logs historical `SensorReadings`. 
+The **Smart Campus API** is a robust, RESTful web service built using Java and the JAX-RS (Jakarta RESTful Web Services) framework. Designed to support a university's automated building infrastructure, it manages physical `Rooms`, tracks diverse IoT `Sensors` (such as CO2, temperature, and occupancy monitors), and logs historical `SensorReadings`. 
 
 The architecture strictly adheres to REST principles, leveraging standard HTTP methods, appropriate status codes (e.g., 201 Created, 204 No Content), sub-resource locators for nested data, and custom exception mapping (e.g., 409 Conflict, 422 Unprocessable Entity, 403 Forbidden) to ensure high resilience and meaningful error handling.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## 2. Build & Launch Instructions
 
-This project is built using **Maven** and runs on a standard Java EE / Jakarta EE application server (such as Apache Tomcat & GlassFish)
+This project is built using **Maven** and runs on a standard Java EE / Jakarta EE application server (such as Apache Tomcat, GlassFish, or Payara).
 
 **Prerequisites:**
 * Java Development Kit (JDK) 8 or higher installed.
@@ -34,7 +33,7 @@ This project is built using **Maven** and runs on a standard Java EE / Jakarta E
 4. **Access the API:**
    The base URL for the API is: `http://localhost:8080/CampusAPI/api/v1/`
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ## 3. Sample cURL Commands
 
@@ -73,9 +72,8 @@ curl -X GET "http://localhost:8080/CampusAPI/api/v1/sensors?type=CO2" \
 curl -X POST http://localhost:8080/CampusAPI/api/v1/sensors/<sensor-id>/readings \
      -H "Content-Type: application/json" \
      -d '{"value": 415.5}'
+```
 
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 4. Conceptual Report
 
