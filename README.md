@@ -77,7 +77,7 @@ curl -X POST http://localhost:8080/CampusAPI/api/v1/sensors/<sensor-id>/readings
 
 ## 4. Conceptual Report
 
-**Q.1.1) Explain the default lifecycle of a JAX-RS Resource class. Is a new instance instantiated for every incoming request, or does the runtime treat it as a singleton? Elaborate on how this architectural decision impacts the way you manage and synchronize your in-memory data structures $(maps/lists)$ to prevent data loss or race conditions.**
+**Q.1.1) Explain the default lifecycle of a JAX-RS Resource class. Is a new instance instantiated for every incoming request, or does the runtime treat it as a singleton? Elaborate on how this architectural decision impacts the way you manage and synchronise your in-memory data structures $(maps/lists)$ to prevent data loss or race conditions.**
 
 ANS ==> JAX-RS defaults to treating resource classes as "per-request". This means that for each incoming HTTP request, a new instance of the class (for example, RoomResource) is generated and then deleted once the response is given. To avoid data loss between many requests when no database is used, in-memory data structures (such as Maps or Lists) must be marked as static, so that they belong to the class rather than the temporary request instance.
 
