@@ -1,17 +1,17 @@
 # Smart Campus Sensor & Room Management API
 
-## 1. API Overview
+# 1. API Overview
 The **Smart Campus API** is a robust, RESTful web service built using Java and the JAX-RS (Jakarta RESTful Web Services) framework. Designed to support a university's automated building infrastructure, it manages physical `Rooms`, tracks diverse IoT `Sensors` (such as CO2, temperature, and occupancy monitors), and logs historical `SensorReadings`. 
 
 The architecture strictly adheres to REST principles, leveraging standard HTTP methods, appropriate status codes (e.g., 201 Created, 204 No Content), sub-resource locators for nested data, and custom exception mapping (e.g., 409 Conflict, 422 Unprocessable Entity, 403 Forbidden) to ensure high resilience and meaningful error handling.
 
 ---
 
-## 2. Build & Launch Instructions
+# 2. Build & Launch Instructions
 
 This project is built using **Maven** and runs on a standard Java EE / Jakarta EE application server (such as Apache Tomcat, GlassFish, or Payara).
 
-**Prerequisites:**
+**Softwares needed:**
 * Java Development Kit (JDK) 8 or higher installed.
 * Apache Maven installed.
 * A Java EE Application Server (e.g., GlassFish, Payara, or Tomcat) configured.
@@ -35,7 +35,7 @@ This project is built using **Maven** and runs on a standard Java EE / Jakarta E
 
 ---
 
-## 3. Sample cURL Commands
+# 3. Sample cURL Commands
 
 Here are five `curl` commands demonstrating successful interactions with different parts of the API:
 
@@ -75,7 +75,7 @@ curl -X POST http://localhost:8080/CampusAPI/api/v1/sensors/<sensor-id>/readings
 ```
 
 
-## 4. Conceptual Report
+# 4. Conceptual Report
 
 **Q.1.1) Explain the default lifecycle of a JAX-RS Resource class. Is a new instance instantiated for every incoming request, or does the runtime treat it as a singleton? Elaborate on how this architectural decision impacts the way you manage and synchronise your in-memory data structures $(maps/lists)$ to prevent data loss or race conditions.**
 
